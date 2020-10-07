@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import DefineSelection from './components/DefineSelection';
+import Customers from './components/Customers';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <img className="logo" src="/imilogo.png" alt="imi"/>
+        <div className="headermenu">
+          <div>Products</div>
+          <div>Customers</div>
+          <div>Orders</div>
+        </div>
+        <div className="login">Login</div>
       </header>
+     <DefineSelection></DefineSelection>
+     <Customers></Customers>
     </div>
   );
 }
