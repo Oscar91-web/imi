@@ -2,8 +2,10 @@ import React from 'react';
 import DefineSelection from './components/DefineSelection';
 import Customers from './components/Customers';
 import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [customers, setCustomers] = useState([]);
   return (
     <div className="App">
       <header className="header">
@@ -15,8 +17,8 @@ function App() {
         </div>
         <div className="login">Login</div>
       </header>
-     <DefineSelection></DefineSelection>
-     <Customers></Customers>
+     <DefineSelection setCustomers={setCustomers}></DefineSelection>
+     <Customers customers={customers}></Customers>
     </div>
   );
 }
