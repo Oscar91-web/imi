@@ -20,30 +20,19 @@ code {
 .CustomerWrapper{
   padding-top: 1em;
 }
-.Customermenu, .DefineSelectionMenu, .DefineSelectionBody{
+.Customermenu{
   background-color: #363636;
   color: white;
   font-weight: bold;
   padding: 10px 10px 10px 10px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
   list-style-type: none;
 }
-
-.DefineSelectionBody{
-  background-color: #E0E0E0;
-  color: black;
-  font-weight: normal;
-  padding: 10px 10px 10px 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-}
 .Customerbody > ul{
- 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+  padding: 10px 10px 10px 10px;
 }
 .Customerbody > ul:nth-child(even) {
   background-color: #e4e4e4
@@ -51,7 +40,12 @@ code {
 .DefineSelectionMenu{
   grid-template-columns: auto 10em;
 }
-.DefineSelectionMenu > div:last-child{
-  text-align: right;
+.CustomerSearchForm{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-top: 1em;
 }
+
 

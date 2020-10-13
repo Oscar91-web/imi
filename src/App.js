@@ -19,6 +19,7 @@ function App() {
       </header>
      <DefineSelection setCustomers={setCustomers}></DefineSelection>
      <Customers customers={customers}></Customers>
+     
     </div>
   );
 }
