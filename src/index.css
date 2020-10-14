@@ -9,43 +9,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 90vw;
-  margin: 0 auto 0 auto;
+ margin: 0;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-.CustomerWrapper{
-  padding-top: 1em;
-}
-.Customermenu{
-  background-color: #363636;
-  color: white;
-  font-weight: bold;
-  padding: 10px 10px 10px 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) 1.5fr;
-  list-style-type: none;
-}
-.Customerbody > ul{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) 1.5fr;
-  padding: 10px 10px 10px 10px;
-}
-.Customerbody > ul:nth-child(even) {
-  background-color: #e4e4e4
-}
-.DefineSelectionMenu{
-  grid-template-columns: auto 10em;
-}
-.CustomerSearchForm{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  margin-top: 1em;
 }
 
 

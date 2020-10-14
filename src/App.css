@@ -1,40 +1,28 @@
-.header {
-  /* background-color: #ec5a5a; */
-  height: 10vh;
-  font-size: 1em;
-  color: rgb(24, 24, 24);
-  display: flex;
-  justify-content: space-between;
-}
-.headermenu{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.headermenu > div{
-  display: flex;
-  justify-items: flex-end;
-  font-size: 2em;
-  font-weight: bold;
-  margin: 0 5vw 0 5vw;
-}
-.logo{
-  height: 90%;
-}
-.login{
-  font-weight: bold;
-}
-.abcdetails{
+.App{
+  height: 100vh;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  grid-template-rows: 20em 2.2em auto;
+  grid-template-columns: 10em 1fr;
+  grid-template-areas: "header details"
+  "header search"
+  "header searchoptions";
 }
-.abcdetails > li{
+.header{
+  
+  grid-area: header;
+  background-color: #303030;
+  color: white;
+  font-weight: bolder;
+}
+.CustomerSearchForm{
+  grid-area: search;
+}
+.resultCustomer{
+  grid-area: details;
   
 }
-.abcdetails > li > label{
-  font-weight: bold;
-  color: green;
+
+.searchOptions{
+  
+  grid-area: searchoptions;
 }

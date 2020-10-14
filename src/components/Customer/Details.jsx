@@ -1,15 +1,12 @@
 import React, { } from "react";
+import './Details.css';
 
 const Details = ({ details }) => {
-    
-
+    if(details != null){
+        
     return (
-        <div>
-        <ul className = "abcdetails">
-
-
-
-
+        <div className = "resultCustomer">
+        <ul>
             <li> <label>Customer number</label><div>{details.customer_number} </div></li>
             <li> <label>Bill</label><div>{details.bill} </div></li>
             <li> <label>City</label><div>{details.city} </div></li>
@@ -22,7 +19,10 @@ const Details = ({ details }) => {
             <li> <label>Street</label><div>{details.street} </div></li>
             </ul>
             </div>
-    )
+                )}
+                else return (<div className ="resultCustomer">
+                    hej
+                </div>);
 }
 
 export default Details;

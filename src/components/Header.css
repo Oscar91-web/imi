@@ -1,0 +1,19 @@
+/* CSS för .header finns i App.css */
+.header{
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 1.3em;
+}
+.headerMenu{
+    padding-top: 30vh;
+}
+.headerMenu > li{
+    padding: 1em;
+}
+.headerMenu > li:hover{
+    background-color: blue;
+}
+.logo{
+    width: 50%;
+}

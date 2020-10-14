@@ -1,0 +1,12 @@
+.CustomerSearchForm{
+ display: flex;
+ flex-wrap: nowrap;
+}
+.searchInput{
+  
+}
+.CustomerSearchForm > div{
+  margin: 0 auto 0 auto;
+}
+.searchInput{
+}

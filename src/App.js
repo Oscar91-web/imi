@@ -1,25 +1,36 @@
-import React from 'react';
-import DefineSelection from './components/DefineSelection';
-import Customers from './components/Customers';
+import React, { Component } from 'react';
+import Header from './components/Header';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './App.css';
-import { useState } from "react";
+import CustomerPage from './components/Customer/CustomerPage';
+import OrderPage from './components/Order/OrderPage';
+
 
 function App() {
-  const [customers, setCustomers] = useState([]);
+
   return (
+    
     <div className="App">
-      <header className="header">
-        <img className="logo" src="/imilogo.png" alt="imi"/>
-        <div className="headermenu">
-          <div>Products</div>
-          <div>Customers</div>
-          <div>Orders</div>
-        </div>
-        <div className="login">Login</div>
-      </header>
+      
+      <Header></Header>
+      <Switch>
+      <Route path='/customers' component={CustomerPage} />
+      <Route path='/orders' component={OrderPage} />
+      </Switch>
+      {/* customers */}
+      
+     {/*<Details details={details}></Details>
      <DefineSelection setCustomers={setCustomers}></DefineSelection>
-     <Customers customers={customers}></Customers>
-     
+     <Customers customers={customers} setDetails={setDetails}></Customers>  */}
+     {/* <OrderDetails details={details}></OrderDetails>
+     <OrderDefineSelection setCustomers={setCustomers}></OrderDefineSelection>
+     <Orders orders={customers} setDetails={setDetails}></Orders>  */}
+
+     {/* <CustomerPage></CustomerPage>
+     <OrderPage></OrderPage> */}
+
     </div>
   );
 }
