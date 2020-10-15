@@ -6,10 +6,14 @@ import OrderDetails from './OrderDetails';
 
 import { useState } from "react";
 
-function OrderPage() {
+function OrderPage(props) {
   const [customers, setCustomers] = useState([]);
   const [details, setDetails] = useState([]);
-  console.log(details)
+  // let receivedMessage = props.location.state.customer;
+  // console.log("CUSTOMER HÄR " + receivedMessage);
+  console.log("här")
+  console.log(props);
+  console.log(props.location.state);
   return (
     <div>
       

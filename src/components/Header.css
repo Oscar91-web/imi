@@ -2,7 +2,6 @@
 .header{
     display: flex;
     flex-direction: column;
-    
     font-size: 1.3em;
 }
 .headerMenu{
@@ -10,6 +9,7 @@
 }
 .headerMenu > li{
     padding: 1em;
+    color: white;
 }
 .headerMenu > li:hover{
     background-color: blue;
