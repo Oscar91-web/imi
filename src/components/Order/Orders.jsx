@@ -1,43 +1,31 @@
 import React, { } from "react";
 import './Orders.css';
 
-const Orders = ({ orders, setDetails }) => {
-    
-
-    // const [customers, setCustomers] = useState([]); från app.js
-
-
+const Orders = ({ orders, setOrder }) => {
     // retunerar sökresultat
-    // console.log(orders)
-    let custsList = orders.map(function (c) {
-        
-        return <ul key={c.order_number} onClick={() => setDetails(c)}>
-                <li> {c.customer_number} </li>
-                <li> {c.status}</li>
-                <li> {c.amount}</li>
-                <li> {c.salesman}</li>
-            </ul>
+    console.log(orders)
+    let orderList = orders.map(function (o) {
+        return <ul key={o.order_number} onClick={() => setOrder(o)}>
+            <li> {o.customer_number} </li>
+            <li> {o.status}</li>
+            <li> {o.amount}</li>
+            <li> {o.salesman}</li>
+        </ul>
     });
 
     return (
         <div className="searchOptions">
-            
             {/* retunerar meny för sökresultat */}
-            <div className="Customermenu">
+            <div className="Ordermenu">
                 <div>Customer</div>
                 <div>Status</div>
                 <div>Amount</div>
                 <div>Salesman</div>
             </div>
             {/* retunerar sökresultat */}
-            <div className="searchResultsCustomer">
-                    {custsList}
+            <div className="searchResultsOrders">
+                {orderList}
             </div>
-            
-            
-
-            
-                
         </div>
     )
 }

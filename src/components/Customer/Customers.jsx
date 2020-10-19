@@ -1,27 +1,20 @@
 import React, { } from "react";
 import './Customers.css';
 
-const Customers = ({ customers, setDetails }) => {
+const Customers = ({ customers, setCustomer }) => {
     
-
-    // const [customers, setCustomers] = useState([]); från app.js
-
-
-    // retunerar sökresultat
     console.log(customers)
-    let custsList = customers.map(function (c) {
-        
-        return <ul key={c.customer_number} onClick={() => setDetails(c)}>
-                <li> {c.customer_number} </li>
-                <li> {c.name}</li>
-                <li> {c.city}</li>
-                <li> {c.street}</li>
-            </ul>
+    let CustomersList = customers.map(function (c) {
+        return <ul key={c.customer_number} onClick={() => setCustomer(c)}>
+            <li> {c.customer_number} </li>
+            <li> {c.name}</li>
+            <li> {c.city}</li>
+            <li> {c.street}</li>
+        </ul>
     });
 
     return (
         <div className="searchOptions">
-            
             {/* retunerar meny för sökresultat */}
             <div className="Customermenu">
                 <div>Customer ID</div>
@@ -31,13 +24,8 @@ const Customers = ({ customers, setDetails }) => {
             </div>
             {/* retunerar sökresultat */}
             <div className="searchResultsCustomer">
-                    {custsList}
+                {CustomersList}
             </div>
-            {/* <DefineSelection setCustomers={setCustomers}></DefineSelection> från app.js  */}
-            
-
-            
-                
         </div>
     )
 }

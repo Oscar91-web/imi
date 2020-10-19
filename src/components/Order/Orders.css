@@ -1,4 +1,4 @@
-.Customermenu{
+.Ordermenu{
     background-color: #363636;
     color: white;
     font-weight: bold;
@@ -6,15 +6,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr) 1.5fr;
   }
-  .searchResultsCustomer > ul{
+  .searchResultsOrders > ul{
     padding: 10px 10px 10px 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr) 1.5fr;
   }
-  .searchResultsCustomer > ul:nth-child(even) {
+  .searchResultsOrders > ul:nth-child(even) {
     background-color: #f7f7f7
   }
-  .searchResultsCustomer > ul:hover{
+  .searchResultsOrders > ul:hover{
     background-color: rgb(221, 221, 221);
 }
   
