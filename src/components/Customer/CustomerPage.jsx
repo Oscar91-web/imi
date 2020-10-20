@@ -10,6 +10,7 @@ function CustomerPage() {
   console.log(customer)
   return (
     <div>
+      <h1>Customer Page</h1>
       <Customer customer={customer}></Customer>
       <SearchCustomers setCustomers={setCustomers}></SearchCustomers>
       <Customers customers={customers} setCustomer={setCustomer}></Customers>

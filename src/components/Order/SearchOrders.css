@@ -1,9 +1,15 @@
-.OrderSearchForm{
- display: flex;
- flex-wrap: nowrap;
+.OrderSearchForm > div > form{
+ display: grid;
+ grid-template-columns: repeat(2, 10em);
 }
 
 .OrderSearchForm > div{
   margin: 0 auto 0 auto;
 }
+.test111{
+  grid-column: 1 / span 2;
+  width: 100%;
+  margin: 10px auto 10px auto;
+ }
+
 
