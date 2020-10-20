@@ -4,46 +4,50 @@ import SearchOrders from './SearchOrders';
 import Orders from './Orders';
 import Order from './Order';
 import axios from 'axios';
+import { useEffect } from 'react';
+
 const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/order";
+
 function OrderPage(props) {
   const [orders, setOrders] = useState([]);
   const [order, setOrder] = useState([]);
+  const [lastSearch, setLastSearch] = useState(null);
 
-  const searchOrders = async (next) => {
-    console.log(next);
+  const searchOrders = async (custNo) => {
+    console.log("searching for orders for customer number: " + custNo);
     try {
-      const data = await axios.get(next);
-
-      if (data != null) {
-        console.log(data.data.orders);
-        // setOrders(data.data.orders);
+      if (!lastSearch || lastSearch != custNo) {
+        const data = await axios.get(API_URL + "?customer_number=" + custNo);
+        setLastSearch(custNo);
+        if (data != null) {
+          console.log("in searchOrders with data: ");
+          console.log(data.data.orders);
+          setOrders(data.data.orders);
+        }
+      }
+      else {
+        console.log("already searched");
       }
     } catch (err) {
       console.log(err)
       // setError(err.message);
     }
   }
-  if (props.location.state) {
-    console.log(props.location.state.customer);
-    searchOrders(API_URL + '?customer_number=' + props.location.state.customer);
-  }
+
+  useEffect(() => {
+    if (props.location.state && props.location.state.customer) {
+      searchOrders(props.location.state.customer);
+    }
+  });
+
   return (
     <div>
       <h1>Order Page</h1>
       <Order order={order}></Order>
       <SearchOrders setOrders={setOrders}></SearchOrders>
       <Orders orders={orders} setOrder={setOrder}></Orders>
-
     </div>
   );
 }
 
 export default OrderPage;
-
-
-
-  // let test123;
-  // console.log("här")
-  // console.log(props);
-
-

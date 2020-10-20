@@ -7,11 +7,11 @@ const Header = () => {
     return (
         <div className="header">
             <img className="logo" src="/imilogo.png" alt="imi" />
-            <ul className="headerMenu">
-                <li><Link to="/">Products</Link></li>
-                <li><Link to="/customers">Customers</Link></li>
-                <li><Link to="/orders">Orders</Link></li>
-            </ul>
+            <div className="headerMenu">
+                <Link to="/products"><div>Products</div></Link>
+                <Link to="/customers"><div>Customers</div></Link>
+                <Link to="/orders"><div>Orders</div></Link>
+            </div>
         </div>
     )
 }

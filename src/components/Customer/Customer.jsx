@@ -3,26 +3,28 @@ import { Link } from "react-router-dom";
 import './Customer.css';
 
 const Customer = ({ customer }) => {
-    if (customer != null) {
+    if (customer !== null) {
         return (
             <div className="resultCustomer">
-                <ul>
-                    <li> <label> <Link to={{
-                            pathname: '/orders/',
-                            state: { customer: customer.customer_number }
+                <div> <Link to={{
+                        pathname: '/orders/',
+                        state: { customer: customer.customer_number }
 
-                        }}>Customer</Link> </label><div>{customer.customer_number}</div></li>
+                    }}><h1>See order lines</h1></Link></div>
+                <ul>
+                    <li><h1>{customer.customer_number}</h1> </li>
+                    <li> <label><h1>{customer.name} </h1></label></li>
+                    <li> <label><h1>{customer.country}</h1></label></li>
+
                     <li> <label>Bill</label><div>{customer.bill} </div></li>
-                    <li> <label>City</label><div>{customer.city} </div></li>
-                    <li> <label>Country</label><div>{customer.country} </div></li>
-                    <li> <label>Language</label><div>{customer.language} </div></li>
-                    <li> <label>Name</label><div>{customer.name} </div></li>
-                    <li> <label>Name2</label><div>{customer.name2} </div></li>
-                    <li> <label>ref</label><div>{customer.ref} </div></li>
                     <li> <label>Salesman</label><div>{customer.salesman} </div></li>
+                    <li> <label>City</label><div>{customer.city} </div></li>
+                    <li> <label>Language</label><div>{customer.language} </div></li>
+                    <li> <label>Reference</label><div>{customer.ref} </div></li>
                     <li> <label>Street</label><div>{customer.street} </div></li>
-                   
+
                 </ul>
+                
 
             </div>
         )
