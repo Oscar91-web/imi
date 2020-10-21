@@ -3,14 +3,10 @@ import { Link } from "react-router-dom";
 import './Customer.css';
 
 const Customer = ({ customer }) => {
-    if (customer !== null) {
+    if (customer) {
         return (
             <div className="resultCustomer">
-                <div> <Link to={{
-                        pathname: '/orders/',
-                        state: { customer: customer.customer_number }
-
-                    }}><h1>See order lines</h1></Link></div>
+                
                 <ul>
                     <li><h1>{customer.customer_number}</h1> </li>
                     <li> <label><h1>{customer.name} </h1></label></li>
@@ -24,13 +20,17 @@ const Customer = ({ customer }) => {
                     <li> <label>Street</label><div>{customer.street} </div></li>
 
                 </ul>
-                
+                <div> <Link to={{
+                        pathname: '/orders/',
+                        state: { customer: customer.customer_number }
+
+                    }}><h1>See order lines</h1></Link></div>
 
             </div>
         )
     }
     else return (<div className="resultCustomer">
-        hej
+        
     </div>);
 }
 

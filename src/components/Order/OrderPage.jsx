@@ -5,12 +5,13 @@ import Orders from './Orders';
 import Order from './Order';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/order";
 
 function OrderPage(props) {
   const [orders, setOrders] = useState([]);
-  const [order, setOrder] = useState([]);
+  const [order, setOrder] = useState(null);
   const [lastSearch, setLastSearch] = useState(null);
 
   const searchOrders = async (custNo) => {
@@ -46,6 +47,7 @@ function OrderPage(props) {
       <Order order={order}></Order>
       <SearchOrders setOrders={setOrders}></SearchOrders>
       <Orders orders={orders} setOrder={setOrder}></Orders>
+      
     </div>
   );
 }

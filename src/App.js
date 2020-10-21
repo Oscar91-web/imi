@@ -5,6 +5,8 @@ import Header from './components/Header';
 import CustomerPage from './components/Customer/CustomerPage';
 import OrderPage from './components/Order/OrderPage';
 import ProductPage from './components/Product/ProductPage';
+import OrderLinePage from './components/OrderLine/OrderLinePage';
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Route path='/Products' component={ProductPage} />
         <Route path='/customers' component={CustomerPage} />
         <Route path='/orders' component={OrderPage} />
+        <Route path='/orderlines' component={OrderLinePage} />
       </Switch>
     </div>
   );

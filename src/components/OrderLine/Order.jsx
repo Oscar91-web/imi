@@ -1,7 +1,5 @@
 import React, { } from "react";
-import { Link } from "react-router-dom";
 import './Order.css';
-
 
 const Order = ({ order }) => {
     console.log("här är jag " + order);
@@ -20,11 +18,7 @@ const Order = ({ order }) => {
                     <li> <label>salesman</label><div>{order.salesman} </div></li>
                     <li> <label>ref</label><div>{order.ref} </div></li>
                     <li> <label>date</label><div>{order.date} </div></li>
-                    <div> <Link to={{
-                        pathname: '/orderlines',
-                        state: { order: order.order_number }
 
-                    }}><h1>See order lines</h1></Link></div>
                 </ul>
             </div>
         )

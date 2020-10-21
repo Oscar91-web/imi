@@ -1,11 +1,9 @@
 .App{
   height: 100vh;
   display: grid;
-  grid-template-rows: 20em 2.2em auto;
+  
   grid-template-columns: 10em 1fr;
-  grid-template-areas: "header details"
-  "header search"
-  "header searchoptions";
+  grid-template-areas: "header details";
 }
 .header{
   grid-area: header;
@@ -13,7 +11,7 @@
   color: white;
   font-weight: bolder;
 }
-.CustomerSearchForm{
+/* .CustomerSearchForm{
   grid-area: search;
 }
 .resultCustomer{
@@ -22,4 +20,4 @@
 
 .searchOptions{
   grid-area: searchoptions;
-}
+} */

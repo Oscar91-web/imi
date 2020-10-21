@@ -1,7 +1,6 @@
-.CustomerSearchForm{
- display: flex;
- flex-wrap: nowrap;
+.search{
+ background-color: #363636;
 }
-.CustomerSearchForm > div{
-  margin: 0 auto 0 auto;
+.searchInput{
+  width: 20em;
 }

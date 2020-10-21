@@ -7,5 +7,10 @@
 .resultCustomer label{
     font-weight: bold;
     font-size: 1.2em;
+    
+}
+.resultCustomer{
+  height: 40vh;
+  
 }
 

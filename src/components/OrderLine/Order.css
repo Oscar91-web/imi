@@ -1,0 +1,10 @@
+.resultOrders > ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+  padding: 10px 10px 10px 10px;
+}
+.resultOrders label{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+

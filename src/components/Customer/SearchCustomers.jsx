@@ -35,13 +35,11 @@ const SearchCustomers = ({ setCustomers }) => {
     }
 
     return (
-        <div className="CustomerSearchForm">
-            <div>
+        <div className="search">
                 <form onSubmit={handleSubmit}>
                     <input className="searchInput" type="text" placeholder="Search..." value={search} onChange={handleChange} />
                     <input type="submit" value="Search" />
                 </form>
-            </div>
         </div>
     )
 }
