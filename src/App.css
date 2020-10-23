@@ -21,3 +21,97 @@
 .searchOptions{
   grid-area: searchoptions;
 } */
+/* customer.css*/
+.gridArea{
+  display: grid;
+  grid-template-rows: 33vh;
+  
+}
+.details{
+  background-color: #0F559B;
+  margin-bottom: 10px;
+  color: white;
+  padding-top: 10px;
+}
+.details > ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.detailsTop{
+  font-size: 2em;
+  font-weight: bold;
+}
+.detailsRight{
+  text-align: right;
+}
+.details >ul > li > label{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/*2th och 3th elementet i griden*/
+.searchform, .results, .details > ul{
+  margin: 0 auto 0 auto;
+  width: 80em;
+}
+
+.searchform > form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.searchform > form > input:first-child{
+  width: 100%;
+  height: 2em;
+}
+
+
+.options_menu, .options_results > ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.options_menu{
+  background-color: #f0f0f0;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.options_results{
+  font-size: 0.8em;
+}
+/*borders2*/
+.options_menu, .options_results{
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.options_results > ul{
+  padding: 10px 10px 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.options_results > ul:nth-child(even) {
+  background-color: #f7f7f7
+}
+.options_results > ul:hover{
+  background-color: rgb(221, 221, 221);
+}
+/*borders*/
+/* .options_menu, .options_menu > div, .options_results > ul > li{
+  border: 1px solid black;
+  border-right: none;
+  border-top: none;
+}
+
+.options_menu, .options_results > ul > li:last-child{
+  border-right: 1px solid black;
+}
+
+.options_menu > div{
+  border-bottom: none;
+  border-left: none;
+}
+.options_menu{
+  padding: 10px;
+}
+.options_results > ul {
+  padding: 10px; 
+} */

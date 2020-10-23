@@ -5,7 +5,7 @@ const OrderLines = ({ orderLines, setOrderLines }) => {
     // retunerar sökresultat
     
     let orderList = orderLines.map(function (o) {
-        return <ul key={o.order_number}>
+        return <ul key={o.order_number} onClick={() => setOrderLines(o)}>
             <li> {o.order_number} </li>
             <li> {o.rowpos}</li>
             <li> {o.rowsubpos}</li>

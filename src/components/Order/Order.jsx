@@ -11,11 +11,11 @@ const Order = ({ order }) => {
         
 
         return (
-            <div className="resultOrders">
+            <div className="details">
                 <ul>
-                    <li> <label>order number</label><div>{order.order_number} </div></li>
-                    <li> <label>customer</label><div>{order.customer_number} </div></li>
-                    <li> <label>status</label><div>{order.status} </div></li>
+                    <li className="detailsTop"><label>order number</label><div>{order.order_number} </div></li>
+                    <li className="detailsTop"> <label>customer</label><div>{order.customer_number} </div></li>
+                    <li className="detailsTop detailsRight"> <label>status</label><div>{order.status} </div></li>
                     <li> <label>amount</label><div>{order.amount} </div></li>
                     <li> <label>salesman</label><div>{order.salesman} </div></li>
                     <li> <label>ref</label><div>{order.ref} </div></li>
@@ -29,7 +29,7 @@ const Order = ({ order }) => {
             </div>
         )
     }
-    else return (<div className="resultOrders">
+    else return (<div className="details">
         
     </div>);
 }

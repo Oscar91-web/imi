@@ -1,5 +1,5 @@
 import React, { } from "react";
-import './Customers.css';
+
 
 const Customers = ({ customers, setCustomer }) => {
     
@@ -14,16 +14,16 @@ const Customers = ({ customers, setCustomer }) => {
     });
 
     return (
-        <div className="searchOptions">
+        <div className="results">
             {/* retunerar meny för sökresultat */}
-            <div className="Customermenu">
-                <div>Customer ID</div>
-                <div>Customer Name</div>
-                <div>City</div>
-                <div>Adress (ska bli ref)</div>
-            </div>
+            <ul className="options_menu">
+                <li>Customer ID</li>
+                <li>Customer Name</li>
+                <li>City</li>
+                <li>Adress (ska bli ref)</li>
+            </ul>
             {/* retunerar sökresultat */}
-            <div className="searchResultsCustomer">
+            <div className="options_results">
                 {CustomersList}
             </div>
         </div>

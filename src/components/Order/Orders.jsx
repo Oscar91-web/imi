@@ -1,5 +1,5 @@
 import React, { } from "react";
-import './Orders.css';
+import './Order.css';
 
 const Orders = ({ orders, setOrder }) => {
     // retunerar sökresultat
@@ -14,16 +14,16 @@ const Orders = ({ orders, setOrder }) => {
     });
 
     return (
-        <div className="searchOptions">
+        <div className="results">
             {/* retunerar meny för sökresultat */}
-            <div className="Ordermenu">
+            <div className="options_menu">
                 <div>Customer</div>
                 <div>Status</div>
                 <div>Amount</div>
                 <div>Salesman</div>
             </div>
             {/* retunerar sökresultat */}
-            <div className="searchResultsOrders">
+            <div className="options_results">
                 {orderList}
             </div>
         </div>

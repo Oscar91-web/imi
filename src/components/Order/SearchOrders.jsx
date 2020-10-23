@@ -1,7 +1,7 @@
 import React, { } from "react";
 import { useState } from "react";
 import axios from 'axios';
-import './SearchOrders.css';
+import './Order.css';
 
 // const API_URL = "http://192.168.0.241:8080/JSONTRIMService/json/customer";
 const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/order";
@@ -49,7 +49,7 @@ const SearchOrders = ({ setOrders }) => {
 
     return (
 
-        <div className="OrderSearchForm">
+        <div className="searchform">
             <div>
                 <form onSubmit={handleSubmit}>
 

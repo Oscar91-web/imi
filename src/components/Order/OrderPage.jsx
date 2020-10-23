@@ -42,8 +42,7 @@ function OrderPage(props) {
   });
 
   return (
-    <div>
-      <h1>Order Page</h1>
+    <div className="gridArea">
       <Order order={order}></Order>
       <SearchOrders setOrders={setOrders}></SearchOrders>
       <Orders orders={orders} setOrder={setOrder}></Orders>
