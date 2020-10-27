@@ -18,17 +18,17 @@ const Customer = ({ customer }) => {
                     <li className="detailsRight"> <label>Street</label><div>{customer.street} </div></li>
 
                 </ul>
-                <div> <Link to={{
+                <div className="see123"> <Link to={{
                         pathname: '/orders/',
                         state: { customer: customer.customer_number }
 
-                    }}>See order lines</Link></div>
+                    }}>123</Link></div>
 
             </div>
         )
     }
     else return (<div className ="details">
-        <div className="detailsTop">Empty</div>
+        <div className="detailsTop"> </div>
         
     </div>);
 }

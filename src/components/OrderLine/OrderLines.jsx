@@ -1,17 +1,35 @@
 import React, { } from "react";
+import { Link } from "react-router-dom";
 // import './Orders.css';
 
 const OrderLines = ({ orderLines, setOrderLines }) => {
     // retunerar sökresultat
-    
+
     let orderList = orderLines.map(function (o) {
-        return <ul key={o.order_number} onClick={() => setOrderLines(o)}>
-            <li> {o.order_number} </li>
-            <li> {o.rowpos}</li>
-            <li> {o.rowsubpos}</li>
-            <li> {o.rowseq}</li>
-            <li> {o.product_id}</li>
-        </ul>
+        let orderkey = o.rowpos +"-"+ o.rowseq;
+
+
+        return <div key= {orderkey}>
+            {orderkey}
+            <div> <Link to={{
+                pathname: '/products/',
+                state: { product: o.product_id }
+            }}>
+                <ul >
+                    <li> {o.order_number} </li>
+                    <li> {o.rowpos}</li>
+                    <li> {o.rowsubpos}</li>
+                    <li> {o.rowseq}</li>
+                    <li> {o.product_id}</li>
+                </ul>
+            </Link>
+            </div>
+
+
+
+        </div>
+
+
     });
 
     return (
@@ -27,6 +45,7 @@ const OrderLines = ({ orderLines, setOrderLines }) => {
             <div className="searchResultsOrders">
                 {orderList}
             </div>
+
         </div>
     )
 }

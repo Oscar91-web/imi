@@ -5,7 +5,7 @@ import Orders from './Orders';
 import Order from './Order';
 import axios from 'axios';
 import { useEffect } from 'react';
-import { Link } from "react-router-dom";
+
 
 const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/order";
 
@@ -17,10 +17,10 @@ function OrderPage(props) {
   const searchOrders = async (custNo) => {
     console.log("searching for orders for customer number: " + custNo);
     try {
-      if (!lastSearch || lastSearch != custNo) {
+      if (!lastSearch || lastSearch !== custNo) {
         const data = await axios.get(API_URL + "?customer_number=" + custNo);
         setLastSearch(custNo);
-        if (data != null) {
+        if (data !== null) {
           console.log("in searchOrders with data: ");
           console.log(data.data.orders);
           setOrders(data.data.orders);
@@ -42,13 +42,19 @@ function OrderPage(props) {
   });
 
   return (
-    <div className="gridArea">
-      <Order order={order}></Order>
-      <SearchOrders setOrders={setOrders}></SearchOrders>
+    <div>
+      <div className="gridArea stickyWrapper">
+
+        <Order order={order}></Order>
+        <SearchOrders setOrders={setOrders}></SearchOrders>
+      </div>
       <Orders orders={orders} setOrder={setOrder}></Orders>
-      
+
     </div>
+
+
   );
 }
 
 export default OrderPage;
+

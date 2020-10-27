@@ -11,12 +11,13 @@ function CustomerPage() {
   console.log(customer)
   return (
     <div>
-      <div className="gridArea">
+        <div className="stickyWrapper gridArea">
         <Customer customer={customer}></Customer>
         <SearchCustomers setCustomers={setCustomers}></SearchCustomers>
+        </div>
         <Customers customers={customers} setCustomer={setCustomer}></Customers>
       </div>
-    </div>
+
   );
 }
 

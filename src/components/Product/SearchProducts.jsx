@@ -4,9 +4,9 @@ import axios from 'axios';
 
 
 // const API_URL = "http://192.168.0.241:8080/JSONTRIMService/json/customer";
-const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/customer";
+const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/product";
 
-const SearchCustomers = ({ setCustomers }) => {
+const SearchProducts = ({ setProducts }) => {
     const [search, setSearch] = useState("");
 
     const handleChange = (e) => {
@@ -17,16 +17,16 @@ const SearchCustomers = ({ setCustomers }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("utsökt: " + search);
-        searchCustomers(API_URL + "/?q=" + search); //?q=
+        searchProducts(API_URL + "/?q=" + search); //?q=
     }
 
-    const searchCustomers = async (next) => {
+    const searchProducts = async (next) => {
         console.log(next);
         try {
             const data = await axios.get(next);
             if (data != null) {
-                console.log(data.data.customers);
-                setCustomers(data.data.customers);
+                console.log(data.data.products);
+                setProducts(data.data.products);
             }
         } catch (err) {
             console.log(err)
@@ -41,12 +41,13 @@ const SearchCustomers = ({ setCustomers }) => {
                     <input type="submit" value="Search" />
                 </form>
                 <ul className="options_menu">
-                <li>Customer #</li>
-                <li>Customer Name</li>
-                <li>City</li>
+                <li>Product #</li>
+                <li>Description</li>
+                <li>Unit</li>
+                
             </ul>
         </div>
     )
 }
 
-export default SearchCustomers;
+export default SearchProducts;

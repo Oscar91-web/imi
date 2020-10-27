@@ -1,6 +1,7 @@
 .App{
   height: 100vh;
   display: grid;
+  
   grid-template-columns: 10em 1fr;
   grid-template-areas: "header details";
 }
@@ -10,11 +11,19 @@
   color: white;
   font-weight: bolder;
 }
+/* .CustomerSearchForm{
+  grid-area: search;
+}
+.resultCustomer{
+  grid-area: details;
+}
 
-
+.searchOptions{
+  grid-area: searchoptions;
+} */
 /* customer.css*/
 .stickyWrapper{
-  position: sticky;
+  position: fixed;
   background-color: white;
   top: 0;
   width: auto;
@@ -70,10 +79,8 @@
 .options_menu{
   background-color: #f0f0f0;
   font-weight: bold;
-  margin-top: 1em;
+  margin-top: 10em;
   position: sticky;
-
-  top: 10em;
  
   
 }
@@ -99,10 +106,6 @@
 }
 .options_results > ul:hover{
   background-color: rgb(221, 221, 221);
-}
-.see123{
-  text-align: right;
-  color: white;
 }
 /*borders*/
 /* .options_menu, .options_menu > div, .options_results > ul > li{

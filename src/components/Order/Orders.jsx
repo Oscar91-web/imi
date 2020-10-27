@@ -16,12 +16,7 @@ const Orders = ({ orders, setOrder }) => {
     return (
         <div className="results">
             {/* retunerar meny för sökresultat */}
-            <div className="options_menu">
-                <div>Customer</div>
-                <div>Status</div>
-                <div>Amount</div>
-                <div>Salesman</div>
-            </div>
+            
             {/* retunerar sökresultat */}
             <div className="options_results">
                 {orderList}

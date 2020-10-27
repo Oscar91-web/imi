@@ -9,19 +9,13 @@ const Customers = ({ customers, setCustomer }) => {
             <li> {c.customer_number} </li>
             <li> {c.name}</li>
             <li> {c.city}</li>
-            <li> {c.street}</li>
         </ul>
     });
 
     return (
         <div className="results">
             {/* retunerar meny för sökresultat */}
-            <ul className="options_menu">
-                <li>Customer ID</li>
-                <li>Customer Name</li>
-                <li>City</li>
-                <li>Adress (ska bli ref)</li>
-            </ul>
+           
             {/* retunerar sökresultat */}
             <div className="options_results">
                 {CustomersList}

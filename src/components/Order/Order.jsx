@@ -13,18 +13,18 @@ const Order = ({ order }) => {
         return (
             <div className="details">
                 <ul>
-                    <li className="detailsTop"><label>order number</label><div>{order.order_number} </div></li>
-                    <li className="detailsTop"> <label>customer</label><div>{order.customer_number} </div></li>
-                    <li className="detailsTop detailsRight"> <label>status</label><div>{order.status} </div></li>
-                    <li> <label>amount</label><div>{order.amount} </div></li>
-                    <li> <label>salesman</label><div>{order.salesman} </div></li>
-                    <li> <label>ref</label><div>{order.ref} </div></li>
-                    <li> <label>date</label><div>{order.date} </div></li>
+                    <li><label className="smallerTopics">Order #</label><div>{order.order_number} </div></li>
+                    <li > <label className="smallerTopics">Customer #</label><div>{order.customer_number} </div></li>
+                    <li> <label className="smallerTopics">Status</label><div>{order.status} </div></li>
+                    <li> <label >Amount</label><div>{order.amount} </div></li>
+                    <li> <label>Aalesman</label><div>{order.salesman} </div></li>
+                    <li> <label>Ref</label><div>{order.ref} </div></li>
+                    <li> <label>Date</label><div>{order.date} </div></li>
                     <div> <Link to={{
                         pathname: '/orderlines',
                         state: { order: order.order_number }
 
-                    }}><h1>See order lines</h1></Link></div>
+                    }}><div className="see123">See order lines</div></Link></div>
                 </ul>
             </div>
         )

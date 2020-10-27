@@ -4,3 +4,25 @@
 [1020/092113.949:ERROR:directory_reader_win.cc(43)] FindFirstFile: Det går inte att hitta sökvägen. (0x3)
 [1021/090806.324:ERROR:directory_reader_win.cc(43)] FindFirstFile: Det går inte att hitta sökvägen. (0x3)
 [1023/101207.972:ERROR:directory_reader_win.cc(43)] FindFirstFile: Det går inte att hitta sökvägen. (0x3)
+[1023/234757.122:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.122:ERROR:exception_snapshot_win.cc(99)] thread ID 14820 not found in process
+[1023/234757.138:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.138:ERROR:exception_snapshot_win.cc(99)] thread ID 33648 not found in process
+[1023/234757.138:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.138:ERROR:exception_snapshot_win.cc(99)] thread ID 31380 not found in process
+[1023/234757.122:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.138:ERROR:exception_snapshot_win.cc(99)] thread ID 33656 not found in process
+[1023/234757.122:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.138:ERROR:exception_snapshot_win.cc(99)] thread ID 19976 not found in process
+[1023/234757.138:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.138:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.138:ERROR:exception_snapshot_win.cc(99)] thread ID 33660 not found in process
+[1023/234757.138:ERROR:exception_snapshot_win.cc(99)] thread ID 33608 not found in process
+[1023/234757.138:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.138:ERROR:exception_snapshot_win.cc(99)] thread ID 33436 not found in process
+[1023/234757.153:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.153:ERROR:exception_snapshot_win.cc(99)] thread ID 20016 not found in process
+[1023/234757.153:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.153:ERROR:exception_snapshot_win.cc(99)] thread ID 32876 not found in process
+[1023/234757.169:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[1023/234757.169:ERROR:exception_snapshot_win.cc(99)] thread ID 30908 not found in process

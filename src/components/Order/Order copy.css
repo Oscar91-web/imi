@@ -1,0 +1,45 @@
+.resultOrders > ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+  padding: 10px 10px 10px 10px;
+}
+.resultOrders label{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.Ordermenu{
+  background-color: #363636;
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+}
+.searchResultsOrders > ul{
+  padding: 10px 10px 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+}
+.searchResultsOrders > ul:nth-child(even) {
+  background-color: #f7f7f7
+}
+.searchResultsOrders > ul:hover{
+  background-color: rgb(221, 221, 221);
+}
+.searchform > div > div > form{
+  display: grid;
+  grid-template-columns: repeat(2, 10em);
+ }
+ 
+ .searchform > div > div{
+   margin: 0 auto 0 auto;
+ }
+ .test111{
+   grid-column: 1 / span 2;
+   width: 100%;
+   margin: 10px auto 10px auto;
+  }
+ 
+ 
+ 

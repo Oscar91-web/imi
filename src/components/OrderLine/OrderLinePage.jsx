@@ -15,10 +15,10 @@ function OrderLinePage(props) {
   const searchOrderLines = async (orderNo) => {
     console.log("searching for orders for customer number: " + orderNo);
     try {
-      if (!lastSearch || lastSearch != orderNo) {
+      if (!lastSearch || lastSearch !== orderNo) {
         const data = await axios.get(API_URL + "?order_number=" + orderNo);
         setLastSearch(orderNo);
-        if (data != null) {
+        if (data !== null) {
           console.log("in searchOrders with data: ");
           console.log(data.data);
           setOrderLines(data.data.orderlines);

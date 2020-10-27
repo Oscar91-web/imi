@@ -52,13 +52,20 @@ const SearchOrders = ({ setOrders }) => {
         <div className="searchform">
             <div>
                 <form onSubmit={handleSubmit}>
-
-                    <label>Order number</label><input className="searchInput" type="text" placeholder="Order..." value={orderNo} onChange={handleOrder} />
-                    <label>Customer</label><input className="searchInput" type="text" placeholder="Customer..." value={customerNo} onChange={handleCustomer} />
+                    <div>
+                    <label className="smallerTopics">Order #</label><input className="searchInput" type="text" placeholder="Order..." value={orderNo} onChange={handleOrder} />
+                    <label className="smallerTopics">Customer</label><input className="searchInput" type="text" placeholder="Customer..." value={customerNo} onChange={handleCustomer} />
                     {/* testa olika handlechange */}
-                    <label>Status</label><input className="searchInput" type="text" placeholder="Status..." value={status} onChange={handleStatus} /> 
+                    <label className="smallerTopics">Status</label><input className="searchInput" type="text" placeholder="Status..." value={status} onChange={handleStatus} /> 
                     <input className="test111" type="submit" value="Search" />
+                    </div>
                 </form>
+                <div className="options_menu">
+                <div>Customer #</div>
+                <div>Status</div>
+                <div>Amount</div>
+                <div>Salesman</div>
+            </div>
             </div>
         </div>
     )
