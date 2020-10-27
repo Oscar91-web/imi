@@ -8,11 +8,23 @@ const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/product";
 
 const SearchProducts = ({ setProducts }) => {
     const [search, setSearch] = useState("");
-
     const handleChange = (e) => {
-        console.log("HandleChange: " + search)
-        setSearch(e.target.value);
+        let value = e.target.value;
+        console.log("HandleChange: " + value)
+        setSearch(value);
+        if(value.length > 2){
+            searchProducts(API_URL + "/?q=" + search);
+            
+        }
+        else{
+            setProducts([]);
+            console.log(value + 'hejjejejejeejejejejejej test');
+        }
     }
+    // const handleChange = (e) => {
+    //     console.log("HandleChange: " + search)
+    //     setSearch(e.target.value);
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault();

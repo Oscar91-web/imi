@@ -1,11 +1,17 @@
 import React, { } from "react";
 
 
-const Customers = ({ customers, setCustomer }) => {
+const Customers = ({ customer, customers, setCustomer }) => {
+    
     
     console.log(customers)
-    let CustomersList = customers.map(function (c) {
-        return <ul key={c.customer_number} onClick={() => setCustomer(c)}>
+    let customersList = customers.map(function (c) {
+        let defaultClass= "UnactivatedSheilds";
+        if(customer && customer===c){
+            defaultClass = "ActivateShields"
+        }
+        
+        return <ul className={defaultClass} key={c.customer_number} onClick={() => setCustomer(c)}>
             <li> {c.customer_number} </li>
             <li> {c.name}</li>
             <li> {c.city}</li>
@@ -18,7 +24,7 @@ const Customers = ({ customers, setCustomer }) => {
            
             {/* retunerar sökresultat */}
             <div className="options_results">
-                {CustomersList}
+                {customersList}
             </div>
         </div>
     )

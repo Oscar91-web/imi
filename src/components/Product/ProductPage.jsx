@@ -47,7 +47,7 @@ function ProductPage(props) {
         <SearchProducts setProducts={setProducts}></SearchProducts>
         
       </div>
-      <Products products={products} setProduct={setProduct}></Products>
+      <Products product={product} products={products} setProduct={setProduct}></Products>
     </div>
   );
 }

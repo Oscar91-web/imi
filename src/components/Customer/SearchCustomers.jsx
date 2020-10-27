@@ -10,8 +10,17 @@ const SearchCustomers = ({ setCustomers }) => {
     const [search, setSearch] = useState("");
 
     const handleChange = (e) => {
-        console.log("HandleChange: " + search)
-        setSearch(e.target.value);
+        let value = e.target.value;
+        console.log("HandleChange: " + value)
+        setSearch(value);
+        if(value.length > 2){
+            searchCustomers(API_URL + "/?q=" + search);
+            
+        }
+        else{
+            setCustomers([]);
+            console.log(value + 'hejjejejejeejejejejejej test');
+        }
     }
 
     const handleSubmit = (e) => {

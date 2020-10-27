@@ -61,7 +61,7 @@ const SearchOrders = ({ setOrders }) => {
                     </div>
                 </form>
                 <div className="options_menu">
-                <div>Customer #</div>
+                <div>Order #</div>
                 <div>Status</div>
                 <div>Amount</div>
                 <div>Salesman</div>

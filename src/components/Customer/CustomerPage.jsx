@@ -15,7 +15,7 @@ function CustomerPage() {
         <Customer customer={customer}></Customer>
         <SearchCustomers setCustomers={setCustomers}></SearchCustomers>
         </div>
-        <Customers customers={customers} setCustomer={setCustomer}></Customers>
+        <Customers customer={customer} customers={customers} setCustomer={setCustomer}></Customers>
       </div>
 
   );

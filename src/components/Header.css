@@ -18,7 +18,7 @@
     width: 2em;
 }
 .options:hover{
-    background-color: blue;
+    background-color: #0F559B;
 }
 .options{
     padding: 10px 10px 20px 10px;
@@ -26,9 +26,11 @@
     
 }
 .options:active{
-    background-color: green;
-}
-.activeLink{
-    background-color: indigo;
+    background-color:  #1266bb;
 }
 
+.activeLink > div{
+    /* color: red;
+    border: 5px inset white; */
+    background-color: #0F559B;
+ }

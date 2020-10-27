@@ -77,9 +77,7 @@
  
   
 }
-.fuskdiv{
-  height: 20em;
-}
+
 .options_results{
   font-size: 0.8em;
 }
@@ -127,3 +125,7 @@
 .options_results > ul {
   padding: 10px; 
 } */
+
+.ActivateShields{
+  background-color: rgb(221, 221, 221) !important;
+}
