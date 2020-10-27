@@ -103,6 +103,8 @@
 .see123{
   text-align: right;
   color: white;
+  font-weight: bold;
+  text-decoration: underline;
 }
 /*borders*/
 /* .options_menu, .options_menu > div, .options_results > ul > li{

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import OrderLines from './OrderLines';
-
+import './OrderLines.css';
 import axios from 'axios';
 import { useEffect } from 'react';
 
@@ -40,9 +40,7 @@ function OrderLinePage(props) {
   });
 
   return (
-    <div>
-      <h1>Orderline Page</h1>
-     
+    <div> 
       <OrderLines orderLines={orderLines} setOrderLines={setOrderLines}></OrderLines>
     </div>
   );

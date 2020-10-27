@@ -1,6 +1,6 @@
 import React, { } from "react";
 import { Link } from "react-router-dom";
-// import './Orders.css';
+import './OrderLines.css';
 
 const OrderLines = ({ orderLines, setOrderLines }) => {
     // retunerar sökresultat
@@ -10,19 +10,19 @@ const OrderLines = ({ orderLines, setOrderLines }) => {
 
 
         return <div key= {orderkey}>
-            {orderkey}
-            <div> <Link to={{
+            
+            <div>
+                <ul  className="orderlinesDetails" >
+                <li> {o.rowpos}</li>
+                <li> {o.rowseq}</li>
+                <li> {o.codate}</li>
+                <li> {o.shipdate}</li>
+                    <li>  <Link to={{
                 pathname: '/products/',
                 state: { product: o.product_id }
-            }}>
-                <ul >
-                    <li> {o.order_number} </li>
-                    <li> {o.rowpos}</li>
-                    <li> {o.rowsubpos}</li>
-                    <li> {o.rowseq}</li>
-                    <li> {o.product_id}</li>
+            }}><div className="see123">{o.product_id}</div></Link></li>
                 </ul>
-            </Link>
+            
             </div>
 
 
@@ -33,16 +33,17 @@ const OrderLines = ({ orderLines, setOrderLines }) => {
     });
 
     return (
-        <div className="searchOptions">
+        <div className="orderlinesColor">
             {/* retunerar meny för sökresultat */}
-            <div className="Ordermenu">
-                <div>Customer</div>
-                <div>Status</div>
-                <div>Amount</div>
-                <div>Salesman</div>
-            </div>
+            <ul className="orderlinesDetailsTop">
+                <li>Pos</li>
+                <li>Seq</li>
+                <li>Order Date</li>
+                <li>Ship Date</li>
+                <li>Customer #</li>
+            </ul>
             {/* retunerar sökresultat */}
-            <div className="searchResultsOrders">
+            <div >
                 {orderList}
             </div>
 

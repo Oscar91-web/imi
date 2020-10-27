@@ -17,13 +17,13 @@ const Customer = ({ customer }) => {
                     <li> <label>Reference</label><div>{customer.ref} </div></li>
                     <li className="detailsRight"> <label>Street</label><div>{customer.street} </div></li>
 
-                </ul>
-                <div className="see123"> <Link to={{
+                <li> </li><li> </li>
+                <li className="see123"> <Link to={{
                         pathname: '/orders/',
                         state: { customer: customer.customer_number }
 
-                    }}>123</Link></div>
-
+                    }}><div className="see123"> See Orders </div></Link></li>
+</ul>
             </div>
         )
     }
