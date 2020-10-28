@@ -1,20 +1,23 @@
 import React, { } from "react";
 import { useState } from "react";
 import axios from 'axios';
+import buildURL from "../Utils";
 
 
-// const API_URL = "http://192.168.0.241:8080/JSONTRIMService/json/customer";
-const API_URL = "http://pluto.im.se:5280/JSONTRIMService/json/customer";
+
+const SORTORDER = ["customer_number","name", "city"];
 
 const SearchCustomers = ({ setCustomers }) => {
     const [search, setSearch] = useState("");
-
+    const [ascending, setAscending] = useState(true);
+    const [columnName, setColumnName] = useState(null);
+    
     const handleChange = (e) => {
         let value = e.target.value;
         console.log("HandleChange: " + value)
         setSearch(value);
         if(value.length > 2){
-            searchCustomers(API_URL + "/?q=" + search);
+            searchCustomers(buildURL("customer", {q: value}));
             
         }
         else{
@@ -26,8 +29,9 @@ const SearchCustomers = ({ setCustomers }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("utsökt: " + search);
-        searchCustomers(API_URL + "/?q=" + search); //?q=
+        searchCustomers(buildURL("customer", {q: search}));
     }
+   
 
     const searchCustomers = async (next) => {
         console.log(next);
@@ -41,8 +45,24 @@ const SearchCustomers = ({ setCustomers }) => {
             console.log(err)
             // setError(err.message);
         }
+        
     }
+    const testclick = (sortorder) => {
 
+        // searchCustomers(API_URL + "?order-by=customer_number&q=" + search);
+        // searchCustomers(API_URL + "?order-by=" + sortorder +"&q=" + search);
+        setAscending(!ascending);
+        setColumnName(sortorder);
+        
+        if(!ascending){
+            setColumnName(columnName + "-");
+        }
+        console.log("sortorder = " + sortorder + "SORTORDERRRRRRRRRRRRRR = " + SORTORDER[1])
+        console.log("clicked");
+        console.log("sortClicked: " + ascending + " | columnName: " + columnName);
+        searchCustomers(buildURL("customer", {q:search, 'order-by': columnName} ))
+        
+    }
     return (
         <div className="searchform">
                 <form onSubmit={handleSubmit}>
@@ -50,9 +70,9 @@ const SearchCustomers = ({ setCustomers }) => {
                     <input type="submit" value="Search" />
                 </form>
                 <ul className="options_menu">
-                <li>Customer #</li>
-                <li>Customer Name</li>
-                <li>City</li>
+                <li onClick={() => testclick(SORTORDER[0])}>Customer #</li>
+                <li onClick={() =>testclick(SORTORDER[1])}>Customer Name</li>
+                <li onClick={() =>testclick(SORTORDER[2])}>City</li>
             </ul>
         </div>
     )

@@ -60,7 +60,7 @@ const SearchOrders = ({ setOrders }) => {
                     <input className="test111" type="submit" value="Search" />
                     </div>
                 </form>
-                <div className="options_menu">
+                <div className="options_menu orderGrid">
                 <div>Order #</div>
                 <div>Status</div>
                 <div>Amount</div>

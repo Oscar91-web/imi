@@ -18,7 +18,7 @@ const Orders = ({ orders, setOrder }) => {
             {/* retunerar meny för sökresultat */}
             
             {/* retunerar sökresultat */}
-            <div className="options_results">
+            <div className="options_results orderGrid">
                 {orderList}
             </div>
         </div>

@@ -65,7 +65,7 @@
 
 .options_menu, .options_results > ul{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 .options_menu{
   background-color: #f0f0f0;
@@ -89,7 +89,9 @@
 
 .options_results > ul{
   padding: 10px 10px 10px 10px;
-  display: grid;
+ 
+}
+.orderGrid > ul, .orderGrid{
   grid-template-columns: repeat(4, 1fr);
 }
 .options_results > ul:nth-child(even) {
