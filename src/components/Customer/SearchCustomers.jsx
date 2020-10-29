@@ -3,40 +3,30 @@ import { useState } from "react";
 import axios from 'axios';
 import buildURL from "../Utils";
 
-
-
-const SORTORDER = ["customer_number","name", "city"];
-
 const SearchCustomers = ({ setCustomers }) => {
     const [search, setSearch] = useState("");
     const [ascending, setAscending] = useState(true);
-    const [columnName, setColumnName] = useState(null);
-    
+
     const handleChange = (e) => {
         let value = e.target.value;
-        console.log("HandleChange: " + value)
         setSearch(value);
-        if(value.length > 2){
-            searchCustomers(buildURL("customer", {q: value}));
-            
+        if (value.length > 2){
+            searchCustomers(buildURL("customer", {q: value, "order-by": "name"}));
         }
-        else{
+        else {
             setCustomers([]);
-            console.log(value + 'hejjejejejeejejejejejej test');
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("utsökt: " + search);
-        searchCustomers(buildURL("customer", {q: search}));
+        searchCustomers(buildURL("customer", {q: search, "order-by": "customer_number"}));
     }
    
-
-    const searchCustomers = async (next) => {
-        console.log(next);
+    const searchCustomers = async (url) => {
+        console.log("url: " + url);
         try {
-            const data = await axios.get(next);
+            const data = await axios.get(url);
             if (data != null) {
                 console.log(data.data.customers);
                 setCustomers(data.data.customers);
@@ -47,22 +37,18 @@ const SearchCustomers = ({ setCustomers }) => {
         }
         
     }
-    const testclick = (sortorder) => {
 
-        // searchCustomers(API_URL + "?order-by=customer_number&q=" + search);
-        // searchCustomers(API_URL + "?order-by=" + sortorder +"&q=" + search);
-        setAscending(!ascending);
-        setColumnName(sortorder);
-        
-        if(!ascending){
-            setColumnName(columnName + "-");
-        }
-        console.log("sortorder = " + sortorder + "SORTORDERRRRRRRRRRRRRR = " + SORTORDER[1])
-        console.log("clicked");
-        console.log("sortClicked: " + ascending + " | columnName: " + columnName);
-        searchCustomers(buildURL("customer", {q:search, 'order-by': columnName} ))
-        
+    const ascDesc = (s) => {
+        return s + ((!ascending) ? "" : "-");
     }
+
+    const sortClick = (col) => {
+        setAscending(!ascending);
+        console.log("col = " + col);
+        console.log("sortClicked: " + ascending + " | columnName: " + col);
+        searchCustomers(buildURL("customer", {"q": search, 'order-by': ascDesc(col) } ));
+    }
+
     return (
         <div className="searchform">
                 <form onSubmit={handleSubmit}>
@@ -70,9 +56,9 @@ const SearchCustomers = ({ setCustomers }) => {
                     <input type="submit" value="Search" />
                 </form>
                 <ul className="options_menu">
-                <li onClick={() => testclick(SORTORDER[0])}>Customer #</li>
-                <li onClick={() =>testclick(SORTORDER[1])}>Customer Name</li>
-                <li onClick={() =>testclick(SORTORDER[2])}>City</li>
+                <li onClick={() => sortClick("customer_number")}>Customer #</li>
+                <li onClick={() => sortClick("name")}>Customer Name</li>
+                <li onClick={() => sortClick("city")}>City</li>
             </ul>
         </div>
     )
