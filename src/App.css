@@ -94,6 +94,10 @@
 .orderGrid > ul, .orderGrid{
   grid-template-columns: repeat(4, 1fr);
 }
+.orderLinesGrid > ul, .orderLinesGrid{
+  grid-template-columns: repeat(5, 1fr);
+  position: static;
+}
 .options_results > ul:nth-child(even) {
   background-color: #f7f7f7
 }

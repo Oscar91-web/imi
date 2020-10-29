@@ -20,7 +20,7 @@ const OrderLines = ({ orderLines, setOrderLines }) => {
                     <li>  <Link to={{
                 pathname: '/products/',
                 state: { product: o.product_id }
-            }}><div className="see123">{o.product_id}</div></Link></li>
+            }}><div className="see123 color123">{o.product_id}</div></Link></li>
                 </ul>
             
             </div>
@@ -33,9 +33,9 @@ const OrderLines = ({ orderLines, setOrderLines }) => {
     });
 
     return (
-        <div className="orderlinesColor">
+        <div className="results">
             {/* retunerar meny för sökresultat */}
-            <ul className="orderlinesDetailsTop">
+            <ul className="options_menu orderLinesGrid">
                 <li>Pos</li>
                 <li>Seq</li>
                 <li>Order Date</li>
@@ -43,7 +43,7 @@ const OrderLines = ({ orderLines, setOrderLines }) => {
                 <li>Customer #</li>
             </ul>
             {/* retunerar sökresultat */}
-            <div >
+            <div className="options_results orderLinesGrid">
                 {orderList}
             </div>
 

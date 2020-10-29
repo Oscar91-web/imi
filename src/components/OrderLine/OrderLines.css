@@ -4,13 +4,16 @@
 .orderlinesDetailsTop, .orderlinesDetails{
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
-  width: 80em;
-  margin: 0 auto 0 auto;
-  padding: 5px;
-  color: white;
+  
+  
+  
 }
 
 .orderlinesColor{
   background-color: #0F559B;
   margin-bottom: 10px;
+}
+.color123{
+  color: blue;
+  text-align: left;
 }
